@@ -1,0 +1,20 @@
+---
+import { fetchProducts } from '../../api/products';
+import Layout from '../../layouts/Default.astro';
+import ProductList from '../../components/ProductList';
+
+const products = await fetchProducts(Astro.request);
+---
+
+<Layout title="shop">
+  <main class="min-h-full bg-isabelline">
+    <section class="container mx-auto py-8 px-4 sm:px-0">
+      <h2
+        class="text-lg font-black text-black uppercase border-b-2 border-gray-100 pb-2"
+      >
+        All Products
+      </h2>
+      <ProductList {products} />
+    </section>
+  </main>
+</Layout>

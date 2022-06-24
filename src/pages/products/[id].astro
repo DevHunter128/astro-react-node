@@ -1,0 +1,16 @@
+---
+import { fetchProduct } from '../../api/products';
+import Layout from '../../layouts/Default.astro';
+import ProductDetails from '../../components/ProductDetails';
+
+const id = Number(Astro.params.id);
+const product = await fetchProduct(Astro.request, id);
+---
+
+<Layout title={product.title}>
+  <main class="min-h-full	bg-isabelline">
+    <section class="container mx-auto py-8 px-4 sm:px-0">
+      <ProductDetails {product} />
+    </section>
+  </main>
+</Layout>
