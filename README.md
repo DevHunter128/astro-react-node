@@ -1,5 +1,7 @@
 # Astro + React + Node Example
 
+This project is an example of using astro implementing SSR to generate page content on each request.
+
 ## Quick start
 
 1.  Clone this repo using `git clone https://github.com/mohamedsamara/astro-react-node.git`
@@ -22,4 +24,16 @@ $ yarn build
 
 ```
 $ yarn preview
+```
+
+## Run server
+
+```
+$ yarn server
+```
+
+## Format with prettier
+
+```
+$ yarn format
 ```
